@@ -1,0 +1,59 @@
+/*
+// 1. Headline styles
+// 2. Paragraph styles
+// 3. Link styles
+*/
+
+// 1. Headline styles
+.heading {
+  &--1 {
+    @include font-size(16);
+  }
+
+  &--3 {
+    @include font-size(24);
+  }
+
+  &--4 {
+    @include font-size(20);
+  }
+
+  &--5 {
+    @include font-size(30);
+  }
+
+  &--6 {
+    @include font-size(50);
+
+    @include from(desktop) {
+      @include font-size(60);
+    }
+  }
+}
+
+// 2. Paragraph styles
+.paragraph {
+  &--1 {
+    @include font-size(23);
+    margin-bottom: 20px;
+  }
+}
+
+// 3. Font weight
+.weight {
+  &--thin {
+    font-weight: 200;
+  }
+  &--light {
+    font-weight: 300;
+  }
+  &--regular {
+    font-weight: 400;
+  }
+  &--bold {
+    font-weight: 700;
+  }
+  &--black {
+    font-weight: 900;
+  }
+}
