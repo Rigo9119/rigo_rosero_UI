@@ -1,0 +1,28 @@
+/*
+// 1. General wrappers
+*/
+
+// 1. general padding
+
+.main__wrapper {
+  margin: 0 auto;
+
+  @include from(desktop) {
+    padding: 55px 120px;
+  }
+}
+
+.small__wrapper {
+  margin: 0 auto;
+  padding: 0;
+
+  @include from(desktop) {
+    margin: 35px 120px;
+  }
+}
+
+// 2. padding top
+
+.body {
+  padding-top: 80px;
+}

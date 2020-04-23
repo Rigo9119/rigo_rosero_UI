@@ -1,0 +1,40 @@
+//BREAKPOINTS VARIABLES
+$bp-mobile: 300px;
+$bp-tablet: 600px;
+$bp-desktop: 1000px;
+$bp-large-desktop: 1440px;
+
+$bps: (
+  'mobile': $bp-mobile,
+  'tablet': $bp-tablet,
+  'desktop': $bp-desktop,
+  'large-desktop': $bp-large-desktop
+);
+
+//MIXIN FOR BREAKPOINTS
+// 1. upto breakpoint
+@mixin upto($media) {
+  $max-width-bp: (map-get($bps, $media) or $media) - 1;
+
+  @media only screen and (max-width: $max-width-bp) {
+    @content;
+  }
+}
+
+// 2. from breakpoint
+@mixin from($media) {
+  $min-width-bp: (map-get($bps, $media) or $media);
+
+  @media only screen and (min-width: $min-width-bp) {
+    @content;
+  }
+}
+
+//MIXIN REM SIZE
+/**
+ * Rem-converter mixin to convert px to rem
+ */
+@mixin font-size($sizeValue) {
+  font-size: $sizeValue + px;
+  font-size: ($sizeValue / 16) + rem;
+}
