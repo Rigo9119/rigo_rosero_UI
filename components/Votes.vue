@@ -37,16 +37,16 @@
           </p>
 
           <div class="votes__people__person__content__votes">
-            <button class="votes__people__person__content__votes__button up" @click="giveLike(index)" :class="candidate.voted == true ? 'hide' : 'show'">
+            <button class="votes__people__person__content__votes__button up" :class="candidate.voted == true ? 'hide' : 'show'" @click="giveLike(index)">
               <font-awesome-icon :icon="['fas', 'thumbs-up']" />
             </button>
-            <button class="votes__people__person__content__votes__button down" @click="giveDislike(index)" :class="candidate.voted == true ? 'hide' : 'show'">
+            <button class="votes__people__person__content__votes__button down" :class="candidate.voted == true ? 'hide' : 'show'" @click="giveDislike(index)">
               <font-awesome-icon :icon="['fas', 'thumbs-down']" />
             </button>
-            <button class="votes__people__person__content__votes__vote" @click="vote(index)" :class="{ hide: candidate.voted }">
+            <button class="votes__people__person__content__votes__vote" :class="{ hide: candidate.voted }" @click="vote(index)">
               Vote Now
             </button>
-            <button class="votes__people__person__content__votes__vote" @click="voteAgain(index)" :class="candidate.voted == false ? 'hide' : 'show'">
+            <button class="votes__people__person__content__votes__vote" :class="candidate.voted == false ? 'hide' : 'show'" @click="voteAgain(index)">
               Vote Again
             </button>
           </div>
@@ -185,8 +185,13 @@ export default {
           img {
             display: block;
             object-fit: cover;
-            height: auto;
+            height: 70vh;
             width: 100%;
+
+            @include from(desktop) {
+              height: 100vh;
+              width: 100%;
+            }
           }
         }
 

@@ -64,7 +64,7 @@ export default {
       this.likes = likes
       this.dislikes = dislikes
     } catch (err) {
-      console.log('Error ::::=> ', err)
+      console.error('Error ::::=> ', err)
     }
   }
 }
