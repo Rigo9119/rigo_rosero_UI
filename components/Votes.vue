@@ -185,6 +185,7 @@ export default {
           img {
             display: block;
             object-fit: cover;
+            height: 70vh;
             width: 100%;
 
             @include from(desktop) {
