@@ -79,6 +79,7 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+    // proxyHeaders: false
   },
   /*
   ** Build configuration

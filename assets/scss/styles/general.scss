@@ -20,6 +20,13 @@
     margin: 35px 120px;
   }
 }
+.sides__wrapper {
+  margin: 0 auto;
+
+  @include from(desktop) {
+    margin: 0 120px;
+  }
+}
 
 // 2. padding top
 

@@ -25,7 +25,7 @@ export default {
   display: none;
   flex-flow: row nowrap;
   justify-content: space-between;
-  width: 25%;
+  width: 85%;
 
   @include from(desktop) {
     display: flex;
@@ -35,13 +35,23 @@ export default {
   &__link {
     color: $white;
 
+    &:hover {
+      border-bottom: 2px solid $yellow-orange;
+      color: $yellow-orange;
+    }
+
     @include from(desktop) {
       @include font-size(22);
     }
   }
 
   &__icon {
+    margin-left: 15px;
     color: $white;
+
+    @include from(desktop) {
+      margin-left: 0;
+    }
   }
 }
 </style>
