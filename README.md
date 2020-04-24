@@ -6,9 +6,9 @@ This is the UI test for Zemoga
 ## First Steps
 
 You will find three branches for this repo **master** , **layout** and **interactive**. 
-> master : [https://github.com/Rigo9119/rigo_rosero_UI/tree/master](https://github.com/Rigo9119/rigo_rosero_UI/tree/master)
-> layout: [https://github.com/Rigo9119/rigo_rosero_UI/tree/layout](https://github.com/Rigo9119/rigo_rosero_UI/tree/layout)
-> interactive: [https://github.com/Rigo9119/rigo_rosero_UI/tree/interactive](https://github.com/Rigo9119/rigo_rosero_UI/tree/interactive)
+> [https://github.com/Rigo9119/rigo_rosero_UI/tree/master](https://github.com/Rigo9119/rigo_rosero_UI/tree/master)
+> [https://github.com/Rigo9119/rigo_rosero_UI/tree/layout](https://github.com/Rigo9119/rigo_rosero_UI/tree/layout)
+> [https://github.com/Rigo9119/rigo_rosero_UI/tree/interactive](https://github.com/Rigo9119/rigo_rosero_UI/tree/interactive)
 
 I decided to use yarn as is the package manager that I feel most confortable with so you can run `yarn install` as soon as you finish downloading the repo.
 
