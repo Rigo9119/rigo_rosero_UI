@@ -1,13 +1,13 @@
 <template>
   <div class="header main__wrapper">
-    <nuxt-link class="header__title" to="/">
+    <nuxt-link class="header__title" to="/" :class="{ hide: toggle }">
       Rule of Thumb.
     </nuxt-link>
-    <Nav />
-    <button  class="header__button weight--bold">
+    <Nav :class="{show: toggle}" />
+    <button class="header__button weight--bold" :class="{ hide: toggle }" @click="toggle=true">
       &#60;
     </button>
-    <button class="header__button weight--bold">
+    <button class="header__button weight--bold hide" :class="{ show: toggle }" @click="toggle=false">
       &#62;
     </button>
   </div>
@@ -19,6 +19,18 @@ import Nav from './Nav'
 export default {
   components: {
     Nav
+  },
+
+  data () {
+    return {
+      toggle: false
+    }
+  },
+
+  methods: {
+    toggleMenu: (event) => {
+      this.toggle = !this.toggle
+    }
   }
 }
 </script>
@@ -57,8 +69,17 @@ export default {
       @include font-size(22);
 
       @include from(desktop) {
+        padding: 15px;
         display: none;
       }
+    }
+
+    .hide {
+      display: none;
+    }
+
+    .show {
+      display: flex;
     }
   }
 </style>

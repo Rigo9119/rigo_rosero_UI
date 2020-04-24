@@ -1,5 +1,5 @@
 <template>
-  <div class="static">
+  <div class="static" :class="{ hide: close }">
     <h4 class="static__title weight--regular">
       Speak out. Be heard.
       <br>
@@ -8,7 +8,7 @@
     <p class="static__paragraph weight--regular">
       Rule of Thumb is a crowd sourced court of public opinion where anyone and everyone can speak out and speak freely. It's easy: You Share your opinion, we analyze and put the data in a public report.
     </p>
-    <button class="static__close weight--thin">
+    <button class="static__close weight--thin" @click="close = true">
       X
     </button>
   </div>
@@ -17,7 +17,17 @@
 <script>
 
 export default {
+  data () {
+    return {
+      close: false
+    }
+  },
 
+  methods: {
+    closeBanner: (event) => {
+      this.close = !close
+    }
+  }
 }
 </script>
 
@@ -38,7 +48,7 @@ export default {
       margin:  0 120px;
     }
 
-    .hide {
+    &.hide {
       display: none;
     }
 
@@ -85,7 +95,9 @@ export default {
       @include font-size(24);
 
       &:hover {
-        background-color: $white;
+        background-color: $black;
+        font-weight: bold;
+        color: $white;
       }
 
       @include from(desktop) {

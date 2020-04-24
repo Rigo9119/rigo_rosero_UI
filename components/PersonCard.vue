@@ -1,7 +1,7 @@
 <template>
   <div class="person">
     <picture class="person__img">
-      <img src="../static/images/kanye.jpeg" :alt="alt">
+      <img :src="src" :alt="alt">
     </picture>
 
     <div class="person__content">
@@ -25,6 +25,10 @@
         {{ description }}
       </p>
 
+      <p class="person__content__description">
+        Thanks for voting
+      </p>
+
       <div class="person__content__votes">
         <button class="person__content__votes__button up">
           <font-awesome-icon :icon="['fas', 'thumbs-up']" />
@@ -35,19 +39,22 @@
         <button class="person__content__votes__vote">
           Vote Now
         </button>
+        <button class="person__content__votes__vote">
+          Vote Again
+        </button>
       </div>
 
       <div class="person__content__results">
-        <div class="person__content__results__bar up left" :style="{ width: (likes / 100) * (likes + dislikes) + '%' }">
+        <div class="person__content__results__bar up left" :style="{ width: (likes * 100) / (likes + dislikes) + '%' }">
           <font-awesome-icon :icon="['fas', 'thumbs-up']" />
           <p>
-            {{ ((likes / 100) * (likes + dislikes) / 100) .toFixed() }}%
+            {{ (likes / (likes + dislikes) * 100).toFixed() }}%
           </p>
         </div>
-        <div class="person__content__results__bar down right" :style="{ width: (dislikes / 100) * (likes + dislikes) + '%' }">
+        <div class="person__content__results__bar down right" :style="{ width: (dislikes * 100) / (likes + dislikes) + '%' }">
           <font-awesome-icon :icon="['fas', 'thumbs-down']" />
           <p>
-            {{ ((dislikes / 100) * (likes + dislikes) / 100).toFixed() }}%
+            {{ (dislikes / (likes + dislikes) * 100).toFixed() }}%
           </p>
         </div>
       </div>
@@ -56,7 +63,6 @@
 </template>
 
 <script>
-
 export default {
   props: {
     src: {
@@ -84,10 +90,25 @@ export default {
       default: ''
     },
     likes: {
+      type: Number,
+      default: 0
+    },
+    like: {
+      type: Boolean
     },
     dislikes: {
+      type: Number,
+      default: 0
+    },
+    dislike: {
+      type: Boolean
+    },
+    voted: {
+      type: Boolean
     }
-  }
+  },
+
+
 }
 </script>
 
