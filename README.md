@@ -1,22 +1,63 @@
-# rigo_rosero_UI
+# Rigo Rosero UI Test 
 
-> My superior Nuxt.js project
+This is the UI test for Zemoga
 
-## Build Setup
 
-```bash
-# install dependencies
-$ yarn install
+## First Steps
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+You will find three branches for this repo **master** , **layout** and **interactive**. 
+> master : [https://github.com/Rigo9119/rigo_rosero_UI/tree/master](https://github.com/Rigo9119/rigo_rosero_UI/tree/master)
+> layout: [https://github.com/Rigo9119/rigo_rosero_UI/tree/layout](https://github.com/Rigo9119/rigo_rosero_UI/tree/layout)
+> interactive: [https://github.com/Rigo9119/rigo_rosero_UI/tree/interactive](https://github.com/Rigo9119/rigo_rosero_UI/tree/interactive)
 
-# build for production and launch server
-$ yarn build
-$ yarn start
+I decided to use yarn as is the package manager that I feel most confortable with so you can run `yarn install` as soon as you finish downloading the repo.
 
-# generate static project
-$ yarn generate
+## Run the project 
+
+To run the project in your local environment: 
+`cd rigo_rosero_UI`
+`yarn dev`
+It will run on `[http://localhost:3000/](http://localhost:3000/) `
+
+## What I use
+
+For this test I decided to use:
+ * Nuxt Js 
+ * AXIOS (async / await),
+ *  SCSS
+ * Yarn
+ 
+ ## Project Structure
+ ### Components:
+```
+/components/
+	/Footer.vue
+	/Header.vue
+	/Hero.vue
+	/InfoBanner.vue
+	/Link.vue
+	/Nav.vue
+	/OpinionCard.vue
+	/PerosnalCard.vue
+	/SubmitBar.vue
+	/Votes.vue
+```
+In there you will find a component that I didn't implement which the ```PersonaslCard.vue``` component, I created that component as an attempt to 
+break the ```Votes.vue``` component in smaller and reusable components but I couldn't manage to pass all the props that it need in order to work. 
+
+### And Pages
+
+```
+/pages/index.vue
+/pages/past.vue
+/pages/how-it-works.vue
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## Styles 
+
+For the styles of the test I decided to use ```SCSS``` and create the layout mostly with ```Flexbox```. The reason being that the first one for me is much confortable the normal css plus I could use variables for the colors, font sizes, and mixins.  
+
+## Responsive Design 
+I tried to approach a mobile first method so I did use breakpoint and mediqueries, the main two being mobile(iphone x ) and (desktop), which were tested using the chrome dev tools.
+
+### Thanks for reading this read me :), I did enjoy doing it and learn new things   
