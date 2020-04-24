@@ -23,11 +23,7 @@ It will run on `[http://localhost:3000/](http://localhost:3000/) `
 
 ## What I use
 
-For this test I decided to use:
- * Nuxt Js 
- * AXIOS (async / await),
- *  SCSS
- * Yarn
+For this test I decided to use Nuxt Js as it gives me a feeling of a more "traitional" way of development, I like the way in that there are styles, templates and scripts in one single file, also is a tool that I dont reallly use every day and wanted to go out of my confort zone.
  
  ## Project Structure
  ### Components:
