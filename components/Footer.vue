@@ -35,9 +35,9 @@ export default {
     border-top: 1px dotted $dove;
     display: flex;
     flex-flow: column nowrap;
-    margin: 0 25px;
-    padding: 25px 0;
     justify-content: space-between;
+    margin: 0 25px 45px 25px;
+    padding: 25px 0;
 
     @include from(desktop) {
       flex-flow: row nowrap;
